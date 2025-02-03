@@ -1,4 +1,3 @@
-// جعل الأقسام تظهر عند التمرير
 document.addEventListener("DOMContentLoaded", function() {
     let sections = document.querySelectorAll("section");
     
@@ -7,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
             let sectionPos = section.getBoundingClientRect().top;
             let windowHeight = window.innerHeight;
             if (sectionPos < windowHeight - 100) {
-                section.classList.add("show");
+                section.style.opacity = "1";
+                section.style.transform = "translateY(0)";
+                section.style.transition = "all 0.5s ease-in-out";
             }
         });
     }
@@ -18,15 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // زر العودة للأعلى
 let backToTop = document.getElementById("backToTop");
-
 window.addEventListener("scroll", function() {
-    if (window.scrollY > 200) {
-        backToTop.style.display = "block";
-    } else {
-        backToTop.style.display = "none";
-    }
+    backToTop.style.display = window.scrollY > 200 ? "block" : "none";
 });
-
 backToTop.addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
