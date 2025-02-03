@@ -1,0 +1,60 @@
+/* تصميم متجاوب وعصري */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f8f9fa;
+    transition: background 0.5s ease-in-out;
+}
+
+header {
+    background: linear-gradient(45deg, #ff6b6b, #556270);
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+section {
+    padding: 40px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.about, .investment, .gallery, .contact {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* الوضع الداكن */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
