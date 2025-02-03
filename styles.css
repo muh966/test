@@ -1,4 +1,3 @@
-/* استيراد خط عربي */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 
 body {
@@ -12,74 +11,79 @@ body {
     scroll-behavior: smooth;
 }
 
-/* تصميم الهيدر */
+/* شريط الأخبار */
+.news-ticker {
+    background: #008793;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* رأس الصفحة وقائمة التنقل */
 header {
     background: linear-gradient(45deg, #004d7a, #008793);
     color: white;
     text-align: center;
-    padding: 25px 15px;
-    font-size: 20px;
+    padding: 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
-header h1 {
-    font-size: 32px;
-    margin: 0;
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* الإحصائيات */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box i {
+    font-size: 40px;
+    color: #008793;
+}
+
+.stat-box h3 {
+    font-size: 24px;
+    margin: 10px 0;
 }
 
 /* تحسين الأقسام */
 section {
     background: white;
-    margin: 80px auto 30px;
+    margin: 80px auto;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 85%;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 0;
-    transform: translateY(30px);
 }
 
-/* جعل الأقسام تظهر بسلاسة عند التمرير */
-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* تحسين النصوص والعناوين */
-h2 {
-    font-size: 26px;
-    color: #004d7a;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* تحسين الأزرار */
-.button {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #008793;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-    transition: background 0.3s ease-in-out;
-}
-
-.button:hover {
-    background: #00667a;
-}
-
-/* تصميم زر العودة للأعلى */
+/* زر العودة للأعلى */
 #backToTop {
     position: fixed;
     bottom: 20px;
@@ -92,42 +96,12 @@ p {
     cursor: pointer;
     display: none;
     font-size: 18px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#backToTop:hover {
-    background: #00667a;
-}
-
-/* تصميم الفوتر */
+/* تحسين الفوتر */
 footer {
     background: #222;
     color: white;
     padding: 15px;
     text-align: center;
-    font-size: 16px;
-    margin-top: 30px;
-}
-
-/* جعل التصميم متجاوبًا */
-@media (max-width: 768px) {
-    section {
-        max-width: 95%;
-        padding: 20px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    #backToTop {
-        bottom: 15px;
-        left: 15px;
-        padding: 8px 12px;
-        font-size: 16px;
-    }
 }
