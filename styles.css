@@ -1,60 +1,79 @@
-/* تصميم متجاوب وعصري */
+/* استيراد خط عربي */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Cairo', sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f8f9fa;
-    transition: background 0.5s ease-in-out;
+    direction: rtl;
+    background: #f4f5f7;
+    color: #333;
+    text-align: right;
 }
 
+/* تصميم الهيدر */
 header {
-    background: linear-gradient(45deg, #ff6b6b, #556270);
+    background: linear-gradient(45deg, #004d7a, #008793);
     color: white;
-    padding: 20px;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 20px;
 }
 
-h1 {
+header h1 {
+    font-size: 32px;
     margin: 0;
 }
 
-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
+/* تصميم الأقسام */
 section {
-    padding: 40px 20px;
-    border-bottom: 2px solid #ddd;
-}
-
-.about, .investment, .gallery, .contact {
     background: white;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 85%;
+    transition: transform 0.3s ease-in-out;
 }
 
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* تحسين النصوص والعناوين */
+h2 {
+    font-size: 26px;
+    color: #004d7a;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* تصميم الفوتر */
 footer {
     background: #222;
     color: white;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
 }
 
-/* الوضع الداكن */
-.dark-mode {
-    background-color: #222;
-    color: white;
+/* جعل التصميم متجاوبًا */
+@media (max-width: 768px) {
+    section {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
