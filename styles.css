@@ -21,13 +21,13 @@ body {
     font-weight: bold;
 }
 
-/* تحسين رأس الصفحة وقائمة التنقل */
+/* تحسين الهيدر ليكون متجاوبًا ديناميكيًا */
 header {
     background: linear-gradient(45deg, #004d7a, #008793);
     color: white;
     text-align: center;
     padding: 15px;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     left: 0;
@@ -35,7 +35,14 @@ header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* تحسين قائمة التنقل */
+/* تحسين قائمة التنقل لتكون ديناميكية */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -59,7 +66,7 @@ nav ul li a {
 /* تحسين المسافات بحيث لا يتداخل الهيدر مع المحتوى */
 section {
     background: white;
-    margin: 120px auto;
+    margin: 90px auto;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -69,7 +76,7 @@ section {
 /* تحسين الإحصائيات */
 .stats-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 15px;
     padding: 20px;
     text-align: center;
@@ -83,7 +90,20 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* زر الرجوع للأعلى */
+/* تحسين معرض الصور */
+.gallery {
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+/* تحسين زر الرجوع للأعلى */
 #backToTop {
     position: fixed;
     bottom: 15px;
@@ -143,14 +163,7 @@ footer {
         font-size: 18px;
     }
 
-    .stat-box i {
-        font-size: 30px;
-    }
-
-    #backToTop {
-        bottom: 10px;
-        left: 10px;
-        padding: 8px 12px;
-        font-size: 16px;
+    .gallery img {
+        max-width: 100%;
     }
 }
