@@ -1,4 +1,3 @@
-// جعل الأقسام تظهر عند التمرير
 document.addEventListener("DOMContentLoaded", function() {
     let sections = document.querySelectorAll("section");
     
