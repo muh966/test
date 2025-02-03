@@ -9,6 +9,7 @@ body {
     background: #f4f5f7;
     color: #333;
     text-align: right;
+    scroll-behavior: smooth;
 }
 
 /* تصميم الهيدر */
@@ -18,6 +19,12 @@ header {
     text-align: center;
     padding: 25px 15px;
     font-size: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 header h1 {
@@ -25,19 +32,23 @@ header h1 {
     margin: 0;
 }
 
-/* تصميم الأقسام */
+/* تحسين الأقسام */
 section {
     background: white;
-    margin: 30px auto;
+    margin: 80px auto 30px;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 85%;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
-section:hover {
-    transform: translateY(-5px);
+/* جعل الأقسام تظهر بسلاسة عند التمرير */
+section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* تحسين النصوص والعناوين */
@@ -50,6 +61,42 @@ h2 {
 p {
     font-size: 18px;
     line-height: 1.8;
+}
+
+/* تحسين الأزرار */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #008793;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #00667a;
+}
+
+/* تصميم زر العودة للأعلى */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #008793;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop:hover {
+    background: #00667a;
 }
 
 /* تصميم الفوتر */
@@ -74,6 +121,13 @@ footer {
     }
 
     p {
+        font-size: 16px;
+    }
+
+    #backToTop {
+        bottom: 15px;
+        left: 15px;
+        padding: 8px 12px;
         font-size: 16px;
     }
 }
