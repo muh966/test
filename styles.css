@@ -59,7 +59,7 @@ nav ul li a {
 /* تحسين المسافات بحيث لا يتداخل الهيدر مع المحتوى */
 section {
     background: white;
-    margin: 90px auto;
+    margin: 120px auto;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -69,7 +69,7 @@ section {
 /* تحسين الإحصائيات */
 .stats-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
     padding: 20px;
     text-align: center;
@@ -83,17 +83,7 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.stat-box i {
-    font-size: 35px;
-    color: #008793;
-}
-
-.stat-box h3 {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-/* تحسين زر الرجوع للأعلى */
+/* زر الرجوع للأعلى */
 #backToTop {
     position: fixed;
     bottom: 15px;
