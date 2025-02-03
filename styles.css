@@ -11,34 +11,42 @@ body {
     scroll-behavior: smooth;
 }
 
-/* شريط الأخبار الموسمي */
+/* تحسين شريط الأخبار الموسمي */
 .seasonal-banner {
     background: linear-gradient(45deg, #ff9800, #ff5722);
     color: white;
     text-align: center;
-    padding: 15px;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 16px;
     font-weight: bold;
 }
 
-/* رأس الصفحة وقائمة التنقل */
+/* تحسين رأس الصفحة وقائمة التنقل */
 header {
     background: linear-gradient(45deg, #004d7a, #008793);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* تحسين قائمة التنقل */
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline-block;
 }
 
 nav ul li a {
@@ -48,23 +56,44 @@ nav ul li a {
     padding: 10px;
 }
 
-/* الإحصائيات */
+/* تحسين المسافات بحيث لا يتداخل الهيدر مع المحتوى */
+section {
+    background: white;
+    margin: 90px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+/* تحسين الإحصائيات */
 .stats-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 15px;
     padding: 20px;
+    text-align: center;
 }
 
 .stat-box {
     background: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* زر الرجوع للأعلى */
+.stat-box i {
+    font-size: 35px;
+    color: #008793;
+}
+
+.stat-box h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* تحسين زر الرجوع للأعلى */
 #backToTop {
     position: fixed;
     bottom: 15px;
@@ -72,8 +101,66 @@ nav ul li a {
     background: rgba(0, 135, 147, 0.9);
     color: white;
     border: none;
-    padding: 12px 16px;
+    padding: 10px 14px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
     display: none;
+    transition: 0.3s ease-in-out;
+}
+
+#backToTop:hover {
+    background: rgba(0, 100, 120, 0.9);
+}
+
+/* تحسين الفوتر */
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+/* تحسين توافق التصميم مع الجوال */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    section {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .stat-box h3 {
+        font-size: 18px;
+    }
+
+    .stat-box i {
+        font-size: 30px;
+    }
+
+    #backToTop {
+        bottom: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
 }
